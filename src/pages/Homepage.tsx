@@ -23,9 +23,8 @@ const TestimonialCard = ({
     if (!card || !animation) return;
 
     const cardDetails = card.getBoundingClientRect();
-
     const breakpointX = cardDetails.x + cardDetails.width / 2;
-    const breakpointY = cardDetails.y + cardDetails.height / 2;
+    const breakpointY = cardDetails.top + cardDetails.height / 2;
 
     const mouseMoveController = (e: MouseEvent) => {
       const x = e.clientX;
@@ -87,9 +86,6 @@ const TestimonialCard = ({
 const Homepage = () => {
   return (
     <>
-      {/* Background gradient */}
-      <div className="w-full h-screen fixed top-0 left-0 bg-hero -z-30"></div>
-
       {/* Hero section */}
       <div className="relative w-full h-screen flex justify-center">
         <TestimonialCard

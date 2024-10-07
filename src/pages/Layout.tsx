@@ -6,6 +6,8 @@ const Layout = () => {
   return (
     <>
       <Header />
+      {/* Background gradient */}
+      <div className="w-full h-screen fixed top-0 left-0 bg-hero -z-30"></div>
       <Outlet />
       <Footer />
     </>
